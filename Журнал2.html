@@ -23,33 +23,39 @@
         }
         body {
             margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        html, body{
+            height: 100%;
         }
         footer {
+            display: block;
             margin-top: 0px;
             max-height: 60px;
             min-height: 60px;
             background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
             color: white;
             text-align: center;
+            flex-shrink: 0;
         }
         footer :first-child {
             height: 10px;
         } 
         .navigation {
             list-style: none;
-            display: block;
+            display: flex;
             background-color: chocolate;
-            max-height: 764px;
-            min-height: 764px;
+            height: auto;
             width: 200px;
             margin: 0;
             padding: 50;
-            justify-content: space-between;
-            position: fixed;
+            justify-content: flex-start;
+            flex-direction: column;
         } 
         .main {
             margin-left: 200px;
-            height: 700px;
+            height: 100%;
             padding: 32px;
         }
         .navigation li a {
@@ -58,60 +64,96 @@
            text-decoration: none; /* убираем подчеркивание ссылки */
            color: #1b1a1a; /* задаем цвет ссылки */
         }
+        .wrapper-center{
+            display: flex;
+            flex-direction: row;
+        }
+        .wrapper-content{
+            flex: 1 0 auto;
+        }
     </style>
-<body> 
-    <header>
+<body>
+    <div class="wrapper-content">
+        <header>
+            <div></div>
+            <div>Детский шахматный клуб</div>
+            <div class="BlackKnight">ЧЁРНЫЙ РЫЦАРЬ</div>
+            <div>ЖУРНАЛ</div>
+        </header>
+        <div class="wrapper-center">
+            <ul class="navigation">
+                <li><a href="#">ГЛАВНАЯ</a></li>
+                <li><a href="#">ДАТА</a></li>
+                <li><a href="#">УЧЕНИКИ</a></li>
+            </ul> 
+            <div class="main">
+                <ul>Ученики
+                    <li><a href="pupils/Асхаева Марина.html">Асхаева Марина</a></li>
+                    <li><a href="pupils/Горбунов Иван.html">Горбунов Иван</a></li>
+                    <li><a href="pupils/Кистенёва Мария.html">Кистенёва Мария</a></li>
+                    <li><a href="pupils/Пятков Григорий.html">Пятков Григорий</a></li>
+                    <li><a href="pupils/Родионов Руслан.html">Родинов Руслан</a></li>
+                    <li><a href="pupils/Салимгареева Антонина.html">Салимгареева Антонина</a></li>
+                    <li><a href="pupils/Сидорова Виктория.html">Сидорова Виктория</a></li>
+                    <li><a href="pupils/Шамшурин Антон.html">Шамшурин Антон</a></li>
+                    <li><a href="pupils/Асхаева Марина.html">Асхаева Марина</a></li>
+                    <li><a href="pupils/Горбунов Иван.html">Горбунов Иван</a></li>
+                    <li><a href="pupils/Кистенёва Мария.html">Кистенёва Мария</a></li>
+                    <li><a href="pupils/Пятков Григорий.html">Пятков Григорий</a></li>
+                    <li><a href="pupils/Родионов Руслан.html">Родинов Руслан</a></li>
+                    <li><a href="pupils/Салимгареева Антонина.html">Салимгареева Антонина</a></li>
+                    <li><a href="pupils/Сидорова Виктория.html">Сидорова Виктория</a></li>
+                    <li><a href="pupils/Шамшурин Антон.html">Шамшурин Антон</a></li>
+                    <li><a href="pupils/Асхаева Марина.html">Асхаева Марина</a></li>
+                    <li><a href="pupils/Горбунов Иван.html">Горбунов Иван</a></li>
+                    <li><a href="pupils/Кистенёва Мария.html">Кистенёва Мария</a></li>
+                    <li><a href="pupils/Пятков Григорий.html">Пятков Григорий</a></li>
+                    <li><a href="pupils/Родионов Руслан.html">Родинов Руслан</a></li>
+                    <li><a href="pupils/Салимгареева Антонина.html">Салимгареева Антонина</a></li>
+                    <li><a href="pupils/Сидорова Виктория.html">Сидорова Виктория</a></li>
+                    <li><a href="pupils/Шамшурин Антон.html">Шамшурин Антон</a></li>
+                    <li><a href="pupils/Асхаева Марина.html">Асхаева Марина</a></li>
+                    <li><a href="pupils/Горбунов Иван.html">Горбунов Иван</a></li>
+                    <li><a href="pupils/Кистенёва Мария.html">Кистенёва Мария</a></li>
+                    <li><a href="pupils/Пятков Григорий.html">Пятков Григорий</a></li>
+                    <li><a href="pupils/Родионов Руслан.html">Родинов Руслан</a></li>
+                    <li><a href="pupils/Салимгареева Антонина.html">Салимгареева Антонина</a></li>
+                    <li><a href="pupils/Сидорова Виктория.html">Сидорова Виктория</a></li>
+                    <li><a href="pupils/Шамшурин Антон.html">Шамшурин Антон</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!---
+        
+        <div>
+            <div>ГЛАВНАЯ</div>
+            <div>ДАТА</div>
+            <div>УЧЕНИКИ</div>
+        </div>
+    <ul>ДАТА
+    <li><a href="date/12.09.2023.html">12.09.2023</a></li>
+    <li><a href="date/13.09.2023.html">13.09.2023</a></li>
+    <li><a href="date/14.09.2023.html">14.09.2023</a></li>
+    <li><a href="date/20.09.2023.html">20.09.2023</a></li>
+    </ul>
+    <br>
+    <ul>Ученики
+    <li><a href="pupils/Асхаева Марина.html">Асхаева Марина</a></li>
+    <li><a href="pupils/Горбунов Иван.html">Горбунов Иван</a></li>
+    <li><a href="pupils/Кистенёва Мария.html">Кистенёва Мария</a></li>
+    <li><a href="pupils/Пятков Григорий.html">Пятков Григорий</a></li>
+    <li><a href="pupils/Родионов Руслан.html">Родинов Руслан</a></li>
+    <li><a href="pupils/Салимгареева Антонина.html">Салимгареева Антонина</a></li>
+    <li><a href="pupils/Сидорова Виктория.html">Сидорова Виктория</a></li>
+    <li><a href="pupils/Шамшурин Антон.html">Шамшурин Антон</a></li>
+    </ul>
+    --->
+    </div>
+    <footer>
         <div></div>
-        <div>Детский шахматный клуб</div>
-        <div class="BlackKnight">ЧЁРНЫЙ РЫЦАРЬ</div>
-        <div>ЖУРНАЛ</div>
-    </header>
-    <ul class="navigation">
-        <li><a href="#">ГЛАВНАЯ</a></li>
-        <li><a href="#">ДАТА</a></li>
-        <li><a href="#">УЧЕНИКИ</a></li>
-    </ul> 
-    <div class="main">
-        <ul>Ученики
-            <li><a href="pupils/Асхаева Марина.html">Асхаева Марина</a></li>
-            <li><a href="pupils/Горбунов Иван.html">Горбунов Иван</a></li>
-            <li><a href="pupils/Кистенёва Мария.html">Кистенёва Мария</a></li>
-            <li><a href="pupils/Пятков Григорий.html">Пятков Григорий</a></li>
-            <li><a href="pupils/Родионов Руслан.html">Родинов Руслан</a></li>
-            <li><a href="pupils/Салимгареева Антонина.html">Салимгареева Антонина</a></li>
-            <li><a href="pupils/Сидорова Виктория.html">Сидорова Виктория</a></li>
-            <li><a href="pupils/Шамшурин Антон.html">Шамшурин Антон</a></li>
-        </ul>
-    </div>
-    <!---
-    
-    <div>
-        <div>ГЛАВНАЯ</div>
-        <div>ДАТА</div>
-        <div>УЧЕНИКИ</div>
-    </div>
-<ul>ДАТА
-<li><a href="date/12.09.2023.html">12.09.2023</a></li>
-<li><a href="date/13.09.2023.html">13.09.2023</a></li>
-<li><a href="date/14.09.2023.html">14.09.2023</a></li>
-<li><a href="date/20.09.2023.html">20.09.2023</a></li>
-</ul>
-<br>
-<ul>Ученики
-<li><a href="pupils/Асхаева Марина.html">Асхаева Марина</a></li>
-<li><a href="pupils/Горбунов Иван.html">Горбунов Иван</a></li>
-<li><a href="pupils/Кистенёва Мария.html">Кистенёва Мария</a></li>
-<li><a href="pupils/Пятков Григорий.html">Пятков Григорий</a></li>
-<li><a href="pupils/Родионов Руслан.html">Родинов Руслан</a></li>
-<li><a href="pupils/Салимгареева Антонина.html">Салимгареева Антонина</a></li>
-<li><a href="pupils/Сидорова Виктория.html">Сидорова Виктория</a></li>
-<li><a href="pupils/Шамшурин Антон.html">Шамшурин Антон</a></li>
-</ul>
---->
-<footer>
-    <div></div>
-    <div>МКУК "МЦДК"</div>
-    <div>р.п. Качуг, ул. Красноармейская, 42</div>
-</footer>
+        <div>МКУК "МЦДК"</div>
+        <div>р.п. Качуг, ул. Красноармейская, 42</div>
+    </footer>
 </body>
 </html>
